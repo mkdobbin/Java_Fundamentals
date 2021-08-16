@@ -1,6 +1,6 @@
 # Java_Fundamentals
 
-Repository contains projects and code from Coursera specialization completed in 2021.
+Repository contains projects and code from Coursera specialization in progress 2021.
 
 Topics covered include:
   1. Programming Foundations with JavaScript, HTML and CSS
