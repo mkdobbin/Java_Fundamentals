@@ -1,0 +1,30 @@
+<script src="http://www.dukelearntoprogram.com/course1/common/js/image/SimpleImage.js">     </script>
+  
+  <h1> Image Filters Prototype</h1>
+ <canvas id="can">
+ </canvas>
+<p> </p> 
+<p>
+<input type="file" 
+         multiple= "false" 
+         accept= "image/*" 
+         id= "file" 
+         onchange= "loadFile()">
+<input type="button"
+        value="Clear Canvases"
+        onclick="clearCanvases()">  
+</p>
+<p> 
+<input type="button"
+       value="Grayscale Image Filter"
+       onclick="makeGray()"> "    "     
+  <input type="button"
+       value="Color Stripe Filter"
+       onclick="makeStripe()">
+ <p/>
+<canvas id="canGray">
+ </canvas>
+<canvas id="canStripe">
+ </canvas>
+<p>  
+</p>
