@@ -105,6 +105,7 @@ public class LogAnalyzer {
         return counts;
     }
     
+    
     public int mostNumberVisitsByIP(HashMap<String, Integer> counts){
         index = 0;
         for (int num : counts.values()){
@@ -125,6 +126,7 @@ public class LogAnalyzer {
         }
         return maxIPs;
     }
+    
     
     public HashMap<String, ArrayList<String>> iPsForDays(){
         HashMap<String,ArrayList<String>> daysIps = new HashMap<String,ArrayList<String>>();
@@ -153,6 +155,7 @@ public class LogAnalyzer {
         return daysIps;
     }
     
+    
     public HashMap<String, ArrayList<String>> dayCountHash(){
         
         HashMap<String,ArrayList<String>> datesIpMap = new HashMap<String,ArrayList<String>>();
@@ -175,6 +178,7 @@ public class LogAnalyzer {
         }
         return datesIpMap;
     }
+    
     
     public String dayWithMostIPVisits(HashMap<String, ArrayList<String>> map){
         
@@ -210,25 +214,22 @@ public class LogAnalyzer {
     	 
      }
     
-    
      private String getDay(LogEntry le) {
-    	 String date = le.getAccessTime().toString();
-    	 // Assuming that day is in the same place
+    	 String date = le.getAccessTime().toString()
     	 return date.substring(4, 10);
      }
-     
+    
+    
     public ArrayList<String> iPsWithMostVisitsOnDay(HashMap<String, ArrayList<String>> map, String day){
         
         System.out.println("The " + day + ", these IPs visited our website: ");
         ArrayList<String> list = new ArrayList<String>();
     	HashMap<String, Integer> visits = countVisitsPerIP(day);
     	 
-    	
     	int maxCount = 0;
     	for (int count : visits.values()) 
     	   if (count > maxCount) maxCount = count;
     	 
-    	
     	for (String ip : visits.keySet())
     	   if (visits.get(ip) == maxCount) list.add(ip);
     	 
